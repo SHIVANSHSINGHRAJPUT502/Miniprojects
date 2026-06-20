@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypercar Grid Dashboard</title>
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 170px);
+      gap: 14px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      position: relative;
+      background-color: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(239, 68, 68, 0.25);
+      border-color: #ef4444;
+      z-index: 10;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.8);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover img {
+      filter: brightness(1) scale(1.03);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 50%, rgba(15, 23, 42, 0));
+      color: #ffffff;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ef4444;
+      margin-bottom: 2px;
+    }
+
+    .card-content p {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      opacity: 0.85;
+    }
+
+    .hero-ferrari { grid-column: 1 / 3; grid-row: 1 / 3; }
+    .wide-bmw     { grid-column: 3 / 5; grid-row: 1 / 2; }
+    .mid-mustang  { grid-column: 3 / 4; grid-row: 2 / 3; }
+    .bottom-porsh { grid-column: 3 / 4; grid-row: 3 / 4; }
+    .tall-lambo   { grid-column: 4 / 5; grid-row: 2 / 4; }
+    .bottom-gtr   { grid-column: 1 / 3; grid-row: 3 / 4; }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    
+    <div class="card hero-ferrari">
+      <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" alt="Ferrari">
+      <div class="card-content">
+        <h3>Ferrari SF90</h3>
+        <p>V8 Hybrid Italian masterpiece.</p>
+      </div>
+    </div>
+
+    <div class="card wide-bmw">
+      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=800&auto=format&fit=crop" alt="BMW">
+      <div class="card-content">
+        <h3>BMW M8 Competition</h3>
+        <p>Twin-turbo luxury track beast.</p>
+      </div>
+    </div>
+
+    <div class="card mid-mustang">
+      <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=400&auto=format&fit=crop">
+      <div class="card-content">
+        <h3>Ford Mustang</h3>
+        <p>Pure American muscle icon.</p>
+      </div>
+    </div>
+
+    <div class="card bottom-porsh">
+      <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=400&auto=format&fit=crop" alt="Porsche">
+      <div class="card-content">
+        <h3>Porsche 911 GT3</h3>
+        <p>Precision engineering king.</p>
+      </div>
+    </div>
+
+    <div class="card tall-lambo">
+      <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?q=80&w=400&auto=format&fit=crop" alt="Lamborghini">
+      <div class="card-content">
+        <h3>Lamborghini Huracan</h3>
+        <p>Naturally aspirated V10 power.</p>
+      </div>
+    </div>
+
+    <div class="card bottom-gtr">
+      <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=800&auto=format&fit=crop" alt="Nissan GTR">
+      <div class="card-content">
+        <h3>Nissan GT-R R35</h3>
+        <p>Godzilla. All-wheel-drive weapon.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

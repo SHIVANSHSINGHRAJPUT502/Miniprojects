@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js problems </title>
+</head>
+<body>
+    <script>
+    //   Student array 
+
+    // 1. Create an array of 5 names
+let names = ["Aarav", "Priya", "Ishaan", "Ananya", "Kabir"];
+
+// 2. Print all using forEach
+console.log("All names:");
+names.forEach(name => console.log(name));
+
+// 3. Print first & last
+console.log("\nFirst name:", names[0]);
+console.log("Last name:", names[names.length - 1]);
+
+// 4. Add 6th using push()
+names.push("Sanya");
+console.log("\nAfter adding 6th name:", names);
+
+// 5. Count using .length
+console.log("Total count:", names.length);
+   
+// counting vowels
+
+function countVowels(str) {
+  let count = 0;
+  // both uppercase and lowercase 
+  const vowels = "aeiouAEIOU";
+  
+  // Loop through each character of the string
+
+  for (let char of str) {
+    // Check if the current character exists in our vowels string
+  
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  
+  return count;
+}
+
+// Testing 
+console.log(countVowels('JavaScript')); // Output: 3
+
+
+// SALARY BONUS CALCULATION
+function calculateSalary(salary, exp) {
+  let finalSalary;
+  
+  if (exp > 5) {
+    // Apply 10% bonus
+    finalSalary = salary + (salary * 0.10);
+  } else {
+    // Apply 5% bonus
+    finalSalary = salary + (salary * 0.05);
+  }
+  
+  return finalSalary;
+}
+
+// Test with the input provided
+console.log(calculateSalary(50000, 6)); // Output: 55000
+
+
+// ES6 Destructuring 5
+
+
+
+const user = { name: "shivansh", age: 21, city: "panipat" };
+
+// Destructure and rename 'city' to 'location'
+const { name, age, city: location } = user;
+
+// Use in a template literal
+console.log(`${name} is ${age} years old and lives in ${location}.`);
+
+// USE SPREAD AND FILTER  6
+
+const arr1 = [1, 5, 15];
+const arr2 = [8, 12, 20];
+
+// Merge using spread operator
+const merged = [...arr1, ...arr2];
+
+// Filter elements > 10
+const result = merged.filter(num => num > 10);
+
+console.log(result); // Output: [15, 12, 20]
+
+   </script>
+</body>
+</html>

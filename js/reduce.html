@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operations on arrays</title>
+</head>
+<body>
+    <script>
+        // REDUCE METHOD  sum of all the elements in an array
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        const sum = numbers.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0);
+
+        console.log(sum); // Output: 15    
+        
+            // REDUCE METHOD SUBTRACTING ALL THE ELEMENTS IN AN ARRAY
+
+            const numbers2 = [1, 2, 3,4,5];
+            const subtraaction = numbers2.reduce((accumulator, currentValue) => {
+                return accumulator - currentValue;
+             }, 15); 
+            //    HERE WE ARE STARTING WITH 15 AND SUBTRACTING ALL THE ELEMENTS IN THE ARRAY
+
+            console.log(subtraaction); // Output: 0
+
+    </script>
+</body>
+</html>

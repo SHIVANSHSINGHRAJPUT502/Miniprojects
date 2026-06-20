@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Practice</title>
+    <style>
+        
+        button {
+            padding: 20px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: black 2px solid;
+        
+        }
+        p {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="colorBtn">Change Color</button>
+    <p id="clickCount">Times clicked: 0</p>
+
+    <script>
+        const btn = document.getElementById('colorBtn');
+        const countDisplay = document.getElementById('clickCount');
+        const colors = ['pink', 'red', 'yellow', 'blue', 'green'];
+        
+        let count = 0; // Counter variable
+
+        btn.addEventListener('click', () => {
+            // 1. Change background color randomly
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            btn.style.backgroundColor = randomColor;
+
+            // 2. Update click count
+            count++;
+            countDisplay.textContent = `Times clicked: ${count}`;
+        });
+    </script>
+
+</body>
+</html>

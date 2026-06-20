@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <!-- <input id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList"></ul>
+    <p id="counter">0 tasks remaining</p> -->
+
+    <script>
+        // const input = document.getElementById('taskInput');
+        // const btn = document.getElementById('addBtn');
+        // const list = document.getElementById('taskList');
+        // const counter = document.getElementById('counter');
+
+        // let taskCount = 0;
+
+        // function updateCounter(change) {
+        //     taskCount += change;
+        //     counter.innerText = `${taskCount} tasks remaining`;
+        // }
+
+        // btn.addEventListener('click', () => {
+        //     const text = input.value.trim();
+
+        //     if (text === "") {
+        //         alert("Please enter a task");
+        //         return;
+        //     }
+
+        //     // Create list item
+        //     const li = document.createElement('li');
+        //     li.textContent = text + " ";
+
+        //     // Create delete button
+        //     const delBtn = document.createElement('button');
+        //     delBtn.textContent = "Delete";
+            
+        //     delBtn.addEventListener('click', () => {
+        //         li.remove();
+        //         updateCounter(-1);
+        //     });
+
+        //     li.appendChild(delBtn);
+        //     list.appendChild(li);
+            
+        //     updateCounter(1);
+        //     input.value = ""; // Clear input
+        // });
+
+
+        // ASYNC AWAIT
+
+        async function loadStudentReport(id) {
+    try {
+        // Handle custom error for invalid ID
+        if (id < 1) {
+            throw new Error("Invalid ID: ID must be 1 or greater.");
+        }
+
+        const student = await getStudent(id);
+        const courses = await getCourses(student);
+        const grades = await getGrades(courses);
+        
+        console.log("Grades:", grades);
+    } catch (e) {
+        console.log("Error:", e.message);
+    } finally {
+        // This runs regardless of success or failure
+        console.log("Report generation complete");
+    }
+}
+    </script>
+</body>
+</html>

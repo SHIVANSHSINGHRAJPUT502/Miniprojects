@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivansh | Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">⚡ WEB PAGE </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <section id="hero">
+            <h1>Building robust software <br>and smart web apps.</h1>
+            <p>Computer Science student focused on writing clean, impactful code and architectures. Currently focusing on building comprehensive full-stack applications.</p>
+            <a href="#projects" class="cta-button">View Work</a>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I'm a developer who enjoys deep-diving into foundational systems and building scalable layouts. 
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Major Full-Stack Project</h3>
+                        <p>A comprehensive web platform featuring solid architectural patterns, optimized data models, and snappy performance handling.</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>High-Performance Utility App</h3>
+                        <p>An application built to efficiently manage complex task workflows, state mechanics, and seamless responsive client rendering.</p>
+                        <div class="tech-tags">
+                            <span class="tag">C++ Core</span>
+                            <span class="tag">Data Systems</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">View Repository &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message logged!');">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Designed and coded cleanly from scratch.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

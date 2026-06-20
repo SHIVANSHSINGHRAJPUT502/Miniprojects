@@ -1,0 +1,63 @@
+
+            <!-- RESPONSIVE BOX -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Box</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8fafc;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .responsive-box {
+            width: 90%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+                        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.4s ease;
+        }
+
+        /*  Mobile  */
+        @media (max-width: 600px) {
+            .responsive-box {
+                background-color: #2563eb;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .responsive-box {
+                background-color: #16a34a;
+            }
+        }
+
+        /* Laptops / Desktops */
+        @media (min-width: 1025px) {
+            .responsive-box {
+                background-color: #dc2626;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="responsive-box"></div>
+
+</body>
+</html>

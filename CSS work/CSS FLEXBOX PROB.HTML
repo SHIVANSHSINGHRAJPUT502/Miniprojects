@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Pricing Section</title>
+  
+  <style>
+    /* 1. Base Reset & Box Model Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f3f3f5; /* Light greyish-cream background exactly like image */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* 2. Parent Flexbox Container (One Row on Desktop) */
+    .pricing-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 30px; /* Equal spacing between cards */
+      padding: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    /* 3. Base Card Styling */
+    .card {
+      background-color: #fbfbfd; /* Off-white color for standard cards */
+      border-radius: 20px; /* Rounded corners as per design */
+      padding: 40px 30px;
+      width: 300px;
+      min-height: 340px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      
+      /* Flexbox inside card to push button to the bottom */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 4. Highlight the Middle Card (Pro Card) */
+    .card.highlighted {
+      background-color: #3b5998; /* Blue background from the image */
+      color: #ffffff; /* White text for contrast */
+      transform: scale(1.05); /* Thoda bada size highlight karne ke liye */
+      box-shadow: 0 10px 30px rgba(59, 89, 152, 0.25);
+    }
+
+    /* Typography & Spacing inside Cards */
+    .card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .features {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #444444;
+      margin-bottom: 20px;
+    }
+
+    /* Text color correction for the blue highlighted card */
+    .card.highlighted .features {
+      color: #e2e8f0;
+    }
+
+    /* 5. Button at the bottom of each card */
+    .btn {
+      background-color: #111111; /* Dark/Black button */
+      color: #ffffff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 85%;
+      
+      /* Magic line: Push button to the absolute bottom of the card */
+      margin-top: auto;
+    }
+
+    /* Hover effects for premium feel */
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+    
+    .card.highlighted:hover {
+      box-shadow: 0 12px 35px rgba(59, 89, 152, 0.35);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pricing-container">
+    
+    <div class="card">
+      <h3>Basic</h3>
+      <p class="price">₹499</p>
+      <p class="features">5 Projects<br>Email Support</p>
+      <button class="btn">Choose Plan</button>
+    </div>
+
+    <div class="card highlighted">
+      <h3>Pro</h3>
+      <p class="price">₹999</p>
+      <p class="features">20 Projects<br>Priority Support</p>
+      <button class="btn">Choose Plan</button>
+    </div>
+
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p class="price">₹1999</p>
+      <p class="features">Unlimited Projects<br>24/7 Support</p>
+      <button class="btn">Choose Plan</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
