@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="weather.css">
-    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <title>Atmosphere Aura</title>
 </head>
-<body>
-    <div class="weather-container">
-        <div class="system-header">ATMOSPHERE</div>
-        <input type="text" id="cityInput" placeholder="Enter city name...">
-        <button onclick="getWeather()">Get Weather</button>
+<body data-weather="default">
+
+    <!-- Animated weather scene lives here. Built entirely with code-driven
+         elements (no GIFs, no emoji) so it never silently fails to load. -->
+    <div id="weatherScene" aria-hidden="true"></div>
+    <div class="vignette"></div>
+
+    <main class="weather-container">
+        <div class="system-header">ATMOSPHERE SYSTEM</div>
+
+        <h1 class="brand">Atmosphere<span>Aura</span></h1>
+
+        <div class="search-row">
+            <input type="text" id="cityInput" placeholder="Enter target city...">
+            <button onclick="getWeather()">ANALYZE</button>
+        </div>
+
         <div id="weatherResult"></div>
-    </div>
+    </main>
+
     <script src="weather.js"></script>
 </body>
 </html>
